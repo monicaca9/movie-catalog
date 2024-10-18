@@ -21,7 +21,7 @@ describe('Showing all favorite movies', () => {
     it("should show the information that no movies have been liked", (done) => {
       document
         .getElementById("movies")
-        .addEventListener("movies:updated", () => {
+        .addEventListener("moviesupdated", () => {
           expect(
             document.querySelectorAll(".movie-item__not__found").length
           ).toEqual(1);
@@ -53,7 +53,7 @@ describe('Showing all favorite movies', () => {
 
   describe('When favorite movies exist', () => {
     it('should show the movies', (done) => {
-        document.getElementById('movies').addEventListener('movies:updated', () => {
+        document.getElementById('movies').addEventListener('moviesupdated', () => {
           expect(document.querySelectorAll('.movie-item').length).toEqual(2);
           done();
         });
@@ -78,6 +78,6 @@ describe('Showing all favorite movies', () => {
           view,
           favoriteMovies,
         });
-    }, 10000);
       });
     });
+  });

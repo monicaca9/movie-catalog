@@ -11,7 +11,7 @@ class FavoriteMovieSearchView {
         <input id="query" type="text">
         <h2 class="content__heading">Your Liked Movie</h2>
    
-        <div id="movie-search-container">
+        <div id="movies">
           <div id="movies" class="movies">
           </div>
         </div>
@@ -37,7 +37,7 @@ class FavoriteMovieSearchView {
       }
       document.getElementById('movies').innerHTML = html;
    
-      document.getElementById('movies').dispatchEvent(new Event('movies:updated'));
+      document.getElementById('movies').dispatchEvent(new Event('moviesupdated'));
     }
 
     _getEmptyMovieTemplate() {
